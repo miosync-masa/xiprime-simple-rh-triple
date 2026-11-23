@@ -1,0 +1,692 @@
+{
+ "modules": [
+  {
+   "module": "RHTriple.ExplicitProduct",
+   "file": "lean/RHTriple/ExplicitProduct.lean",
+   "local_imports": []
+  },
+  {
+   "module": "RHTriple.PairHeight",
+   "file": "lean/RHTriple/PairHeight.lean",
+   "local_imports": [
+    "RHTriple.ExplicitProduct"
+   ]
+  },
+  {
+   "module": "RHTriple.PrimeArithmetic",
+   "file": "lean/RHTriple/PrimeArithmetic.lean",
+   "local_imports": []
+  },
+  {
+   "module": "RHTriple.PrimeKernel",
+   "file": "lean/RHTriple/PrimeKernel.lean",
+   "local_imports": [
+    "RHTriple.ExplicitProduct",
+    "RHTriple.PrimeArithmetic"
+   ]
+  },
+  {
+   "module": "RHTriple.MixedSupport",
+   "file": "lean/RHTriple/MixedSupport.lean",
+   "local_imports": [
+    "RHTriple.PrimeKernel"
+   ]
+  },
+  {
+   "module": "RHTriple.MixedSlots",
+   "file": "lean/RHTriple/MixedSlots.lean",
+   "local_imports": [
+    "RHTriple.MixedSupport"
+   ]
+  },
+  {
+   "module": "RHTriple.PairMarginals",
+   "file": "lean/RHTriple/PairMarginals.lean",
+   "local_imports": [
+    "RHTriple.MixedSlots"
+   ]
+  },
+  {
+   "module": "RHTriple.PairIntegrated",
+   "file": "lean/RHTriple/PairIntegrated.lean",
+   "local_imports": [
+    "RHTriple.PairHeight",
+    "RHTriple.PairMarginals"
+   ]
+  },
+  {
+   "module": "RHTriple.ZetaSlotWeights",
+   "file": "lean/RHTriple/ZetaSlotWeights.lean",
+   "local_imports": [
+    "RHTriple.PairIntegrated"
+   ]
+  },
+  {
+   "module": "RHTriple.SlotExclusion",
+   "file": "lean/RHTriple/SlotExclusion.lean",
+   "local_imports": []
+  },
+  {
+   "module": "RHTriple.CountableSlotSieve",
+   "file": "lean/RHTriple/CountableSlotSieve.lean",
+   "local_imports": [
+    "RHTriple.PairIntegrated",
+    "RHTriple.SlotExclusion"
+   ]
+  },
+  {
+   "module": "RHTriple.GammaKernel",
+   "file": "lean/RHTriple/GammaKernel.lean",
+   "local_imports": [
+    "RHTriple.ExplicitProduct"
+   ]
+  },
+  {
+   "module": "RHTriple.GammaSeries",
+   "file": "lean/RHTriple/GammaSeries.lean",
+   "local_imports": [
+    "RHTriple.GammaKernel"
+   ]
+  },
+  {
+   "module": "RHTriple.GammaBounds",
+   "file": "lean/RHTriple/GammaBounds.lean",
+   "local_imports": [
+    "RHTriple.GammaSeries"
+   ]
+  },
+  {
+   "module": "RHTriple.GammaLimit",
+   "file": "lean/RHTriple/GammaLimit.lean",
+   "local_imports": [
+    "RHTriple.GammaBounds"
+   ]
+  },
+  {
+   "module": "RHTriple.MainPlane",
+   "file": "lean/RHTriple/MainPlane.lean",
+   "local_imports": [
+    "RHTriple.GammaLimit",
+    "RHTriple.MixedSlots"
+   ]
+  },
+  {
+   "module": "RHTriple.GammaPlane",
+   "file": "lean/RHTriple/GammaPlane.lean",
+   "local_imports": [
+    "RHTriple.MainPlane"
+   ]
+  },
+  {
+   "module": "RHTriple.PairGammaMain",
+   "file": "lean/RHTriple/PairGammaMain.lean",
+   "local_imports": [
+    "RHTriple.GammaPlane",
+    "RHTriple.PairHeight"
+   ]
+  },
+  {
+   "module": "RHTriple.PairEFExpansion",
+   "file": "lean/RHTriple/PairEFExpansion.lean",
+   "local_imports": [
+    "RHTriple.PairIntegrated",
+    "RHTriple.PairGammaMain"
+   ]
+  },
+  {
+   "module": "RHTriple.MixedArithmetic",
+   "file": "lean/RHTriple/MixedArithmetic.lean",
+   "local_imports": [
+    "RHTriple.PrimeArithmetic"
+   ]
+  },
+  {
+   "module": "RHTriple.PrimePairWeight",
+   "file": "lean/RHTriple/PrimePairWeight.lean",
+   "local_imports": [
+    "RHTriple.MixedArithmetic"
+   ]
+  },
+  {
+   "module": "RHTriple.PairPrimeSeparation",
+   "file": "lean/RHTriple/PairPrimeSeparation.lean",
+   "local_imports": [
+    "RHTriple.MixedSupport",
+    "RHTriple.PrimePairWeight"
+   ]
+  },
+  {
+   "module": "RHTriple.PairPrimeMain",
+   "file": "lean/RHTriple/PairPrimeMain.lean",
+   "local_imports": [
+    "RHTriple.PairPrimeSeparation",
+    "RHTriple.PairGammaMain"
+   ]
+  },
+  {
+   "module": "RHTriple.PairPrimeRescale",
+   "file": "lean/RHTriple/PairPrimeRescale.lean",
+   "local_imports": [
+    "RHTriple.PairPrimeMain"
+   ]
+  },
+  {
+   "module": "RHTriple.PolarFactor",
+   "file": "lean/RHTriple/PolarFactor.lean",
+   "local_imports": [
+    "RHTriple.MixedSupport",
+    "RHTriple.GammaBounds"
+   ]
+  },
+  {
+   "module": "RHTriple.PairPrimeL1",
+   "file": "lean/RHTriple/PairPrimeL1.lean",
+   "local_imports": [
+    "RHTriple.PolarFactor",
+    "RHTriple.MixedArithmetic"
+   ]
+  },
+  {
+   "module": "RHTriple.PairGammaPrimeGap",
+   "file": "lean/RHTriple/PairGammaPrimeGap.lean",
+   "local_imports": [
+    "RHTriple.PairPrimeL1",
+    "RHTriple.PairGammaMain"
+   ]
+  },
+  {
+   "module": "RHTriple.PairRemainder",
+   "file": "lean/RHTriple/PairRemainder.lean",
+   "local_imports": [
+    "RHTriple.PairEFExpansion",
+    "RHTriple.PairPrimeRescale",
+    "RHTriple.PairGammaPrimeGap"
+   ]
+  },
+  {
+   "module": "RHTriple.ZetaScale",
+   "file": "lean/RHTriple/ZetaScale.lean",
+   "local_imports": [
+    "RHTriple.ExplicitProduct"
+   ]
+  },
+  {
+   "module": "RHTriple.PairMain",
+   "file": "lean/RHTriple/PairMain.lean",
+   "local_imports": [
+    "RHTriple.PairRemainder",
+    "RHTriple.ZetaScale"
+   ]
+  },
+  {
+   "module": "RHTriple.PairMarginalMain",
+   "file": "lean/RHTriple/PairMarginalMain.lean",
+   "local_imports": [
+    "RHTriple.PairMain",
+    "RHTriple.PairMarginals"
+   ]
+  },
+  {
+   "module": "RHTriple.MixedKernel",
+   "file": "lean/RHTriple/MixedKernel.lean",
+   "local_imports": [
+    "RHTriple.GammaBounds",
+    "RHTriple.PrimeKernel"
+   ]
+  },
+  {
+   "module": "RHTriple.MixedSums",
+   "file": "lean/RHTriple/MixedSums.lean",
+   "local_imports": [
+    "RHTriple.MixedArithmetic",
+    "RHTriple.MixedKernel",
+    "RHTriple.MixedSupport"
+   ]
+  },
+  {
+   "module": "RHTriple.MixedAssembly",
+   "file": "lean/RHTriple/MixedAssembly.lean",
+   "local_imports": [
+    "RHTriple.MixedSums"
+   ]
+  },
+  {
+   "module": "RHTriple.MixedGate",
+   "file": "lean/RHTriple/MixedGate.lean",
+   "local_imports": [
+    "RHTriple.MixedAssembly",
+    "RHTriple.MixedSlots"
+   ]
+  },
+  {
+   "module": "RHTriple.ZetaSlotSieve",
+   "file": "lean/RHTriple/ZetaSlotSieve.lean",
+   "local_imports": [
+    "RHTriple.ZetaSlotWeights",
+    "RHTriple.CountableSlotSieve",
+    "RHTriple.PairMarginalMain",
+    "RHTriple.MixedGate"
+   ]
+  },
+  {
+   "module": "RHTriple.TriplePrimeAssembly",
+   "file": "lean/RHTriple/TriplePrimeAssembly.lean",
+   "local_imports": [
+    "RHTriple.MixedGate"
+   ]
+  },
+  {
+   "module": "RHTriple.TriplePrimeDiagonal",
+   "file": "lean/RHTriple/TriplePrimeDiagonal.lean",
+   "local_imports": [
+    "RHTriple.TriplePrimeAssembly"
+   ]
+  },
+  {
+   "module": "RHTriple.TriplePrimeSymmetry",
+   "file": "lean/RHTriple/TriplePrimeSymmetry.lean",
+   "local_imports": [
+    "RHTriple.TriplePrimeAssembly"
+   ]
+  },
+  {
+   "module": "RHTriple.PolarPlane",
+   "file": "lean/RHTriple/PolarPlane.lean",
+   "local_imports": [
+    "RHTriple.PolarFactor"
+   ]
+  },
+  {
+   "module": "RHTriple.PolarPrime",
+   "file": "lean/RHTriple/PolarPrime.lean",
+   "local_imports": [
+    "RHTriple.MixedAssembly"
+   ]
+  },
+  {
+   "module": "RHTriple.PolarGate",
+   "file": "lean/RHTriple/PolarGate.lean",
+   "local_imports": [
+    "RHTriple.MixedGate",
+    "RHTriple.PolarPlane",
+    "RHTriple.PolarPrime"
+   ]
+  },
+  {
+   "module": "RHTriple.TriplePrimeGate",
+   "file": "lean/RHTriple/TriplePrimeGate.lean",
+   "local_imports": [
+    "RHTriple.TriplePrimeDiagonal",
+    "RHTriple.TriplePrimeSymmetry",
+    "RHTriple.PolarGate"
+   ]
+  },
+  {
+   "module": "RHTriple.MainRescale",
+   "file": "lean/RHTriple/MainRescale.lean",
+   "local_imports": [
+    "RHTriple.GammaPlane",
+    "RHTriple.MixedGate"
+   ]
+  },
+  {
+   "module": "RHTriple.FocusedLimit",
+   "file": "lean/RHTriple/FocusedLimit.lean",
+   "local_imports": [
+    "RHTriple.MainRescale"
+   ]
+  },
+  {
+   "module": "RHTriple.PairedLimit",
+   "file": "lean/RHTriple/PairedLimit.lean",
+   "local_imports": [
+    "RHTriple.FocusedLimit",
+    "RHTriple.PrimePairWeight"
+   ]
+  },
+  {
+   "module": "RHTriple.HeightMass",
+   "file": "lean/RHTriple/HeightMass.lean",
+   "local_imports": [
+    "RHTriple.FocusedLimit"
+   ]
+  },
+  {
+   "module": "RHTriple.TripleMain",
+   "file": "lean/RHTriple/TripleMain.lean",
+   "local_imports": [
+    "RHTriple.TriplePrimeGate",
+    "RHTriple.PairedLimit",
+    "RHTriple.HeightMass",
+    "RHTriple.ZetaScale"
+   ]
+  },
+  {
+   "module": "RHTriple.Nu3SieveMain",
+   "file": "lean/RHTriple/Nu3SieveMain.lean",
+   "local_imports": [
+    "RHTriple.TripleMain",
+    "RHTriple.PairMarginalMain"
+   ]
+  },
+  {
+   "module": "RHTriple.SingletonMain",
+   "file": "lean/RHTriple/SingletonMain.lean",
+   "local_imports": [
+    "RHTriple.PairHeight",
+    "RHTriple.PolarFactor",
+    "RHTriple.GammaLimit",
+    "RHTriple.ZetaScale"
+   ]
+  },
+  {
+   "module": "RHTriple.DistinctTripleMain",
+   "file": "lean/RHTriple/DistinctTripleMain.lean",
+   "local_imports": [
+    "RHTriple.ZetaSlotSieve",
+    "RHTriple.Nu3SieveMain",
+    "RHTriple.SingletonMain"
+   ]
+  },
+  {
+   "module": "RHTriple.SlotBlocks",
+   "file": "lean/RHTriple/SlotBlocks.lean",
+   "local_imports": [
+    "RHTriple.SlotExclusion",
+    "RHTriple.ExplicitProduct"
+   ]
+  },
+  {
+   "module": "RHTriple.CertificateSmoothing",
+   "file": "lean/RHTriple/CertificateSmoothing.lean",
+   "local_imports": [
+    "RHTriple.ExplicitProduct"
+   ]
+  },
+  {
+   "module": "RHTriple.CertificateSmoothingInverse",
+   "file": "lean/RHTriple/CertificateSmoothingInverse.lean",
+   "local_imports": [
+    "RHTriple.CertificateSmoothing"
+   ]
+  },
+  {
+   "module": "RHTriple.FactorialMoment",
+   "file": "lean/RHTriple/FactorialMoment.lean",
+   "local_imports": [
+    "RHTriple.DistinctTripleMain",
+    "RHTriple.SlotBlocks",
+    "RHTriple.CertificateSmoothingInverse"
+   ]
+  },
+  {
+   "module": "RHTriple.FactorialDyadic",
+   "file": "lean/RHTriple/FactorialDyadic.lean",
+   "local_imports": [
+    "RHTriple.FactorialMoment"
+   ]
+  },
+  {
+   "module": "RHTriple.FactorialCumulative",
+   "file": "lean/RHTriple/FactorialCumulative.lean",
+   "local_imports": [
+    "RHTriple.FactorialDyadic"
+   ]
+  },
+  {
+   "module": "RHTriple.HeightMajorantKernel",
+   "file": "lean/RHTriple/HeightMajorantKernel.lean",
+   "local_imports": [
+    "RHTriple.PairHeight"
+   ]
+  },
+  {
+   "module": "RHTriple.HeightMajorant",
+   "file": "lean/RHTriple/HeightMajorant.lean",
+   "local_imports": [
+    "RHTriple.HeightMajorantKernel"
+   ]
+  },
+  {
+   "module": "RHTriple.FactorialCertificate",
+   "file": "lean/RHTriple/FactorialCertificate.lean",
+   "local_imports": [
+    "RHTriple.FactorialCumulative",
+    "RHTriple.HeightMajorant"
+   ]
+  },
+  {
+   "module": "RHBridge.MultiplicityBridge",
+   "file": "lean/RHBridge/MultiplicityBridge.lean",
+   "local_imports": []
+  },
+  {
+   "module": "RHTripleIntegration.CertificateBound",
+   "file": "lean/RHTripleIntegration/CertificateBound.lean",
+   "local_imports": [
+    "RHTriple.FactorialCertificate",
+    "RHBridge.MultiplicityBridge"
+   ]
+  },
+  {
+   "module": "RHTriple.CertificateApproximation",
+   "file": "lean/RHTriple/CertificateApproximation.lean",
+   "local_imports": [
+    "RHTriple.FactorialCertificate"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.Nu3Continuity",
+   "file": "lean/TripleCorrelation/Nu3Continuity.lean",
+   "local_imports": []
+  },
+  {
+   "module": "RHTripleIntegration.CertificateLimit",
+   "file": "lean/RHTripleIntegration/CertificateLimit.lean",
+   "local_imports": [
+    "RHTripleIntegration.CertificateBound",
+    "RHTriple.CertificateApproximation",
+    "TripleCorrelation.Nu3Continuity"
+   ]
+  },
+  {
+   "module": "RHTripleIntegration.CertificateNormalize",
+   "file": "lean/RHTripleIntegration/CertificateNormalize.lean",
+   "local_imports": [
+    "RHTripleIntegration.CertificateLimit"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.Checker",
+   "file": "lean/TripleCorrelation/Checker.lean",
+   "local_imports": []
+  },
+  {
+   "module": "TripleCorrelation.CheckerInt",
+   "file": "lean/TripleCorrelation/CheckerInt.lean",
+   "local_imports": [
+    "TripleCorrelation.Checker"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.Generic",
+   "file": "lean/TripleCorrelation/Generic.lean",
+   "local_imports": [
+    "TripleCorrelation.CheckerInt"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.CheckerPack",
+   "file": "lean/TripleCorrelation/CheckerPack.lean",
+   "local_imports": [
+    "TripleCorrelation.Generic"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.PackSound",
+   "file": "lean/TripleCorrelation/PackSound.lean",
+   "local_imports": [
+    "TripleCorrelation.CheckerPack"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.Sem",
+   "file": "lean/TripleCorrelation/Sem.lean",
+   "local_imports": [
+    "TripleCorrelation.PackSound"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.SemCheck",
+   "file": "lean/TripleCorrelation/SemCheck.lean",
+   "local_imports": [
+    "TripleCorrelation.Sem"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.Hexagon",
+   "file": "lean/TripleCorrelation/Hexagon.lean",
+   "local_imports": []
+  },
+  {
+   "module": "TripleCorrelation.HexLink",
+   "file": "lean/TripleCorrelation/HexLink.lean",
+   "local_imports": [
+    "TripleCorrelation.SemCheck",
+    "TripleCorrelation.Hexagon"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.J3Region",
+   "file": "lean/TripleCorrelation/J3Region.lean",
+   "local_imports": [
+    "TripleCorrelation.HexLink"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.J4Slice",
+   "file": "lean/TripleCorrelation/J4Slice.lean",
+   "local_imports": [
+    "TripleCorrelation.J3Region"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.J4Outer",
+   "file": "lean/TripleCorrelation/J4Outer.lean",
+   "local_imports": [
+    "TripleCorrelation.J4Slice"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.J4Final",
+   "file": "lean/TripleCorrelation/J4Final.lean",
+   "local_imports": [
+    "TripleCorrelation.J4Outer"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.GateReal",
+   "file": "lean/TripleCorrelation/GateReal.lean",
+   "local_imports": [
+    "TripleCorrelation.SemCheck"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.P20",
+   "file": "lean/TripleCorrelation/P20.lean",
+   "local_imports": [
+    "TripleCorrelation.CheckerInt"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.D20Pack",
+   "file": "lean/TripleCorrelation/D20Pack.lean",
+   "local_imports": [
+    "TripleCorrelation.P20",
+    "TripleCorrelation.PackSound"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.GateRegion",
+   "file": "lean/TripleCorrelation/GateRegion.lean",
+   "local_imports": [
+    "TripleCorrelation.J4Final",
+    "TripleCorrelation.GateReal",
+    "TripleCorrelation.D20Pack"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.Jacobian",
+   "file": "lean/TripleCorrelation/Jacobian.lean",
+   "local_imports": [
+    "TripleCorrelation.GateRegion"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.Nu3InclExcl",
+   "file": "lean/TripleCorrelation/Nu3InclExcl.lean",
+   "local_imports": [
+    "TripleCorrelation.Nu3Continuity"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.SymReduce",
+   "file": "lean/TripleCorrelation/SymReduce.lean",
+   "local_imports": [
+    "TripleCorrelation.Jacobian",
+    "TripleCorrelation.Nu3InclExcl"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.Phi0Props",
+   "file": "lean/TripleCorrelation/Phi0Props.lean",
+   "local_imports": [
+    "TripleCorrelation.SymReduce"
+   ]
+  },
+  {
+   "module": "TripleCorrelation.CertFinal",
+   "file": "lean/TripleCorrelation/CertFinal.lean",
+   "local_imports": [
+    "TripleCorrelation.Phi0Props",
+    "TripleCorrelation.Nu3Continuity"
+   ]
+  },
+  {
+   "module": "RHTripleIntegration.SimpleProportion",
+   "file": "lean/RHTripleIntegration/SimpleProportion.lean",
+   "local_imports": [
+    "RHTripleIntegration.CertificateNormalize",
+    "TripleCorrelation.CertFinal"
+   ]
+  }
+ ],
+ "external": [
+  "Mathlib",
+  "Mathlib.Analysis.Asymptotics.Lemmas",
+  "Mathlib.Analysis.Calculus.BumpFunction.FiniteDimension",
+  "Mathlib.Analysis.Calculus.BumpFunction.Normed",
+  "Mathlib.Analysis.Calculus.ContDiff.Convolution",
+  "Mathlib.Analysis.Fourier.Convolution",
+  "Mathlib.Analysis.Normed.Module.Basic",
+  "Mathlib.Analysis.PSeries",
+  "Mathlib.Analysis.SpecialFunctions.Pow.Asymptotics",
+  "Mathlib.Analysis.SpecialFunctions.Pow.Real",
+  "Mathlib.Data.Rat.Defs",
+  "Mathlib.MeasureTheory.Integral.DominatedConvergence",
+  "Mathlib.NumberTheory.ArithmeticFunction.VonMangoldt",
+  "Mathlib.NumberTheory.Harmonic.Bounds",
+  "Mathlib.Tactic",
+  "Zeta23.Assembly",
+  "Zeta23.ExplicitFormula.Bridge",
+  "Zeta23.GammaFacts.Complete",
+  "Zeta23.RvM.Statement",
+  "Zeta23.Statement",
+  "Zeta23.Statement.SeamClosed",
+  "Zeta23.WeilEF.Main",
+  "Zeta23.XiPrime.Coeff.NonSquarefree",
+  "Zeta23.XiPrime.ExplicitFormula.ZeroFree",
+  "Zeta23.XiPrime.Seam",
+  "Zeta23.XiPrime.ZeroCount"
+ ]
+}
