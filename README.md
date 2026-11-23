@@ -4,7 +4,7 @@ Lean 4 proof that, assuming the Riemann hypothesis, more than 97.42% of the zero
 
 Author: **Masamichi Iizumi** · Miosync, Inc., Tokyo, Japan · ORCID [0009-0007-0755-403X](https://orcid.org/0009-0007-0755-403X)
 
-DOI: [TODO: reserved Zenodo DOI]
+DOI:10.5281/zenodo.24454639
 
 ## The theorem
 
