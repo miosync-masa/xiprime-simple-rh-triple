@@ -33,7 +33,7 @@ The only hypothesis in the type is `RiemannHypothesis`, Mathlib's definition, wh
 
 ## About RH
 
-This repository does not prove RH. The statement of `RiemannHypothesis` is textually identical at our Mathlib pin (`51e6992e…`) and at the pin of the Lean proof of RH by L. Alpöge with Claude (Lean v4.33.1, Mathlib `0df444a3…`), certified by the joint statement of the Lean FRO and the Mathlib Initiative. Supplying that theorem for the hypothesis removes it. A build combining both libraries in a single environment is not part of this release.
+This repository does not prove RH. The statement of `RiemannHypothesis` is textually identical at our Mathlib pin (`51e6992e…`) and at the pin of the Lean proof of RH by L. Alpöge with Claude ([Deicyde/riemann-hypothesis](https://github.com/Deicyde/riemann-hypothesis), `Main.lean`, commit `40e56bab…`; Lean v4.33.1, Mathlib `0df444a3…`), which is the subject of the joint statement [Lean verification of the Riemann Hypothesis](https://leanprover-community.github.io/blog/posts/riemann-hypothesis/). Supplying that theorem for the hypothesis removes it. A build combining both libraries in a single environment is not part of this release.
 
 ## Proof outline
 
@@ -81,7 +81,7 @@ This repository contains only the import closure of the final theorem. The uncon
 
 ## References and attribution
 
-- L. Alpöge, with Claude, Lean development of the Riemann hypothesis (2026).
+- L. Alpöge, with Claude, Lean development of the Riemann hypothesis (2026), <https://github.com/Deicyde/riemann-hypothesis>; joint statement <https://leanprover-community.github.io/blog/posts/riemann-hypothesis/>.
 - L. Alpöge, R. Furman, arXiv:2608.13637v2, and the AF Lean library (Anthropic).
 - Z. Rudnick, P. Sarnak, Duke Math. J. 81 (1996).
 - F. Gonçalves, D. de Laat, N. Leijenhorst, arXiv:2303.01095v2, and its ancillary code and data (integration regions and polynomial data used in `TripleCorrelation/`).
