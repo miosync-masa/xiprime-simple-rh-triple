@@ -1,0 +1,909 @@
+{
+ "af_commit": "3635e74826a4c1fcece7d1cd2b6fa75e43a00510 (sources) with lean-toolchain, lakefile.toml, lake-manifest.json moved to the target pin",
+ "af_dirty_files": "n/a (copy without .git; compared with the pinned checkout by diff -r: only the three pin files differ)",
+ "toolchain": "leanprover/lean4:v4.33.1",
+ "workers": 3,
+ "wall_seconds": 223.2,
+ "sum_module_seconds": 594.5,
+ "modules": 89,
+ "succeeded": 89,
+ "not_built": [],
+ "errors": 0,
+ "sorryAx": 0,
+ "warnings": 20,
+ "combined_source_sha256": "0fc6ba0b12e136ebff1e81d1c3a2766fd31ffcd28edb5a433b2cd980a90ea72c",
+ "combined_olean_sha256": "f05b785bd741472f5b4e7a345ec0528b9b33307ba3f86f57d3ba40c7798e5351",
+ "results": [
+  {
+   "module": "RHBridge.MultiplicityBridge",
+   "rc": 0,
+   "seconds": 6.4,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "706b7205ffb2c927f94b8064576e0f1fa31fd19a914afa45ed048cb5ae502d96",
+   "olean_sha256": "570e2a362a81d6fe068a095ec0d8d814a49724063a5da4960e370b5419993c39"
+  },
+  {
+   "module": "RHTriple.CertificateApproximation",
+   "rc": 0,
+   "seconds": 6.8,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "6f182edb602c301665d7ff8547b0d3c5a028c34ab070f539694ad30219b40862",
+   "olean_sha256": "f8c5f867d51077bfe5dd6b6081c9d133516279612e63e1ce9dc113e68659a367"
+  },
+  {
+   "module": "RHTriple.CertificateSmoothing",
+   "rc": 0,
+   "seconds": 3.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "987f542c2cf95f9af717d532430ece6e71d6bf35ce8fc8e845af44dd2d6d3eba",
+   "olean_sha256": "665df4725c7e793ca8e4b00bb717c565eae8b7b89c9ead7c8f1bfa89fc566030"
+  },
+  {
+   "module": "RHTriple.CertificateSmoothingInverse",
+   "rc": 0,
+   "seconds": 4.7,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "8cf5ad0dfdbba7b27b501068fccb9c0809d052cb01184b1a4058198c1fb4d400",
+   "olean_sha256": "f2dde6bb1b37202f97d650f7a065d34a01c5b5802e2c5d138895ff5a3f549485"
+  },
+  {
+   "module": "RHTriple.CountableSlotSieve",
+   "rc": 0,
+   "seconds": 21.2,
+   "errors": 0,
+   "warnings": 1,
+   "sorryAx": 0,
+   "src_sha256": "47651491fbc303e59fddbbb0bb255f7b9907e321dcf6066728033a62e0b81bbc",
+   "olean_sha256": "ca17f79fd75ca0a81f190554f4ef838740d9796fa2e03585a03fa953f47fc0a3"
+  },
+  {
+   "module": "RHTriple.DistinctTripleMain",
+   "rc": 0,
+   "seconds": 12.4,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "7536d86873cfcf3c8b2f3f43f956c876bd212336195e12b635107ba89e8ed7a1",
+   "olean_sha256": "43e8949f9390b9d2470f049a6c28b3dfd9667393ae0f14e4f2d0beed5a698fb2"
+  },
+  {
+   "module": "RHTriple.ExplicitProduct",
+   "rc": 0,
+   "seconds": 11.7,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "8e2e9376e35ab2287203793178904076c437988159ec47e37025d4cf5fbbc220",
+   "olean_sha256": "cd40db2291287a237c638309e8528b9e70da7750e7fe027d53152c14c111dd61"
+  },
+  {
+   "module": "RHTriple.FactorialCertificate",
+   "rc": 0,
+   "seconds": 40.6,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "2908ab2e0a6b7cd185ae347b25fc158189b53239eafb2e4910e0b573e2295323",
+   "olean_sha256": "52e2a166d327254bbb82141cd96f4e91d4eb9549e4b958a4611ba2add35470a4"
+  },
+  {
+   "module": "RHTriple.FactorialCumulative",
+   "rc": 0,
+   "seconds": 6.1,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "81bafabee6d3369f747a36427a0b583433f1525fc1c3ecdd5a3ae1e1517a5261",
+   "olean_sha256": "00ff77c01d922f9bf8f581c5c8788192d344b30bcd3a604499259864f44c4094"
+  },
+  {
+   "module": "RHTriple.FactorialDyadic",
+   "rc": 0,
+   "seconds": 11.8,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "bc9cca4654b0b03146759b648edb28b022bd81bce29f5ca115e93e03ed7f6779",
+   "olean_sha256": "d6dd3d9dd4a7fd071f7fc83a528de0c7f82c54acd1447c97c8df2437593eb20b"
+  },
+  {
+   "module": "RHTriple.FactorialMoment",
+   "rc": 0,
+   "seconds": 11.1,
+   "errors": 0,
+   "warnings": 2,
+   "sorryAx": 0,
+   "src_sha256": "9e266da244ba40003acae3f6dc5941ef24467ff958c85be7928b2d605b79b3d2",
+   "olean_sha256": "36cbf9443a449e1515f7b9ec904b53228dbe45552d4b958a5c4ab81bafa56cf3"
+  },
+  {
+   "module": "RHTriple.FocusedLimit",
+   "rc": 0,
+   "seconds": 3.3,
+   "errors": 0,
+   "warnings": 1,
+   "sorryAx": 0,
+   "src_sha256": "31558fea6c1d3f42abb8b195422fda75e012e9dc4609b269954f827e972f7148",
+   "olean_sha256": "86c65de5072aef72214a8b3813f857bbf3eb4f26104616ecccb9bddf41b0f4e3"
+  },
+  {
+   "module": "RHTriple.GammaBounds",
+   "rc": 0,
+   "seconds": 4.6,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "2c7a25b9aa4b905131e839ea6764ddda8ad85e5de0b9510a103dcd4b0649d6ee",
+   "olean_sha256": "eb059c0f1f863714cc99685f54db0c1b7ed914897e3c13efacadf940ded705ec"
+  },
+  {
+   "module": "RHTriple.GammaKernel",
+   "rc": 0,
+   "seconds": 5.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "efc51a862d8854aa29d848d4267f3e67cec365e0dbc94c7e9414219af390c438",
+   "olean_sha256": "cffa3e75b1490e687bd534f0547efbb5eb61ebf916c6c9b708c204a569a7bf94"
+  },
+  {
+   "module": "RHTriple.GammaLimit",
+   "rc": 0,
+   "seconds": 3.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "dba611b464464d399245b7c2db7b40afb80b4880c134960bf13aa38830d23629",
+   "olean_sha256": "24b0efa7645169a53d7e3d6580414a5d4491eabbc5256df3e7d61ed1527d3a9a"
+  },
+  {
+   "module": "RHTriple.GammaPlane",
+   "rc": 0,
+   "seconds": 3.2,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "817645c5cd34f104cfa72609c7505e17a93e874860e24adf6d910918533ea96c",
+   "olean_sha256": "e0be72a7311b87a94786271a40a91323a7e587d54890e9109598e164a728da90"
+  },
+  {
+   "module": "RHTriple.GammaSeries",
+   "rc": 0,
+   "seconds": 4.8,
+   "errors": 0,
+   "warnings": 3,
+   "sorryAx": 0,
+   "src_sha256": "257d5b573fbd38d4f508c3b00e9a7a0e8067fc5694d6b6ea6797f0a83f68a3cf",
+   "olean_sha256": "136e0de4848dd2934bb787043e23703ef2670d7ac7ca184a6bb42f2e42135394"
+  },
+  {
+   "module": "RHTriple.HeightMajorant",
+   "rc": 0,
+   "seconds": 5.2,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "ea65671639c349e303ed5089919ced18cf889b6ce7f4e37fb653d763c5065fd6",
+   "olean_sha256": "08f5fe4b62050d5f8b1441480c2cd69636812dec80bd54d0b6270670dc4bc247"
+  },
+  {
+   "module": "RHTriple.HeightMajorantKernel",
+   "rc": 0,
+   "seconds": 6.3,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "a6fcfd7a4e5c7776380fa9ffef7f97dfa058a0705d0d9f7d42eb9e9e4b8b67a8",
+   "olean_sha256": "20e1a9db98b4920e09bd1a39dc7605a96b40b128bf04d1ff540b0fabe0a67d9f"
+  },
+  {
+   "module": "RHTriple.HeightMass",
+   "rc": 0,
+   "seconds": 3.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "3fbafeee0123c465010b79754c5b49ed065b782a9767380df937cc637e2214cc",
+   "olean_sha256": "b0337b60ea72fc6a3fc97df327c5fa38472e35fd9b7bb69e64f818c0ac184b55"
+  },
+  {
+   "module": "RHTriple.MainPlane",
+   "rc": 0,
+   "seconds": 3.3,
+   "errors": 0,
+   "warnings": 2,
+   "sorryAx": 0,
+   "src_sha256": "ad65facbf311b48f14e4f0ff7fd9a1341b98c013c726312cfa0262b23dc5ffee",
+   "olean_sha256": "2f8495c7545a4ead1e318d53c1bd7a8e85aa10b4a4bfaf58c718787f4bd01f9a"
+  },
+  {
+   "module": "RHTriple.MainRescale",
+   "rc": 0,
+   "seconds": 3.2,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "3f961f03779b139b5db9476c1ed1da96e5ec60f12774ce93b6a33e7b2bee93f7",
+   "olean_sha256": "aadecfaf30ee108da171659a47a9f2927b843956c7201e6c35e220d09e268b0a"
+  },
+  {
+   "module": "RHTriple.MixedArithmetic",
+   "rc": 0,
+   "seconds": 5.1,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "e6361c78d09225e4adc420c8bd640fc3d63130164524ef0a188550d9d30a1c43",
+   "olean_sha256": "f3380237a5f51d3126a19b5af044dfd936bd8e662be54c08d9921cc666674261"
+  },
+  {
+   "module": "RHTriple.MixedAssembly",
+   "rc": 0,
+   "seconds": 4.1,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "80fb780a24fa30f484ad974afa3de27036f35a45360bdb132d094e5a101ddf6f",
+   "olean_sha256": "4bf80ae1ebda65128c7b67020b322ef12b4b6a306ab00a8663598b462b4e9093"
+  },
+  {
+   "module": "RHTriple.MixedGate",
+   "rc": 0,
+   "seconds": 3.3,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "6eac087c1b21640f2d1f2c017ed91e5b7f63f16f70a817ff469c6a33feb3052b",
+   "olean_sha256": "d07f25601c01016aaec3e15d7ae0d7cce156af0857a6110bc022ec7a42f4a4e6"
+  },
+  {
+   "module": "RHTriple.MixedKernel",
+   "rc": 0,
+   "seconds": 4.6,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "7ab64f69e3cdeb8b01ab618c5a2e392ab7352e48736d80b2b207d5d002db4392",
+   "olean_sha256": "7a68612c7a312b0e3195e3b1eca36218ddc095078035ef6dc564ae38876d48d8"
+  },
+  {
+   "module": "RHTriple.MixedSlots",
+   "rc": 0,
+   "seconds": 2.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "36e9124012433b9d9f12a81540b62c20982f6ec364955332ceaaee577f7b5441",
+   "olean_sha256": "a24b64af6d1ef571ce4c4851661a62847c74dff9425a885cc5fee4c4aded9d40"
+  },
+  {
+   "module": "RHTriple.MixedSums",
+   "rc": 0,
+   "seconds": 5.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "1b08879f25d4dfac60f0a066a18a46e1ae04ff62fe29ece3865f61900b9afa4a",
+   "olean_sha256": "7872b40dd730b6e4a8c10b3288c99e04ba318bccff306511453c697123360557"
+  },
+  {
+   "module": "RHTriple.MixedSupport",
+   "rc": 0,
+   "seconds": 4.1,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "a6ea1bb88b83f0838dbaf4783f3ff2a89bfd2aa9519abe2d53e9f60e016cd2ef",
+   "olean_sha256": "98660f5861870746284119a3d080faa166edffb1e97ab9b8e4389cd394e5330e"
+  },
+  {
+   "module": "RHTriple.Nu3SieveMain",
+   "rc": 0,
+   "seconds": 4.7,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "276495e6bcc5dcf7dd121690a6c8f97c903c1133b565ef977fc1359f141a770b",
+   "olean_sha256": "29b45de2a70ee4ca928b93a897ae18cd1eb039f4e1616e89f269124656ac9ad0"
+  },
+  {
+   "module": "RHTriple.PairEFExpansion",
+   "rc": 0,
+   "seconds": 3.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "0710ade46fbb5ec00c7a511abb9231652fc394c301aa941372aaa863fcde09e6",
+   "olean_sha256": "2b2d9ab4b0409397a40528d2d09c1f301815b127e7399b6a5fb17f5225f40e95"
+  },
+  {
+   "module": "RHTriple.PairGammaMain",
+   "rc": 0,
+   "seconds": 4.1,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "951bbee4de7758ca350c04af1595731effa1a2eae3809a67bd910ea29d411c3c",
+   "olean_sha256": "8d9f16842b4774689c16a1b08b4ad03bae64e7aa2f5b7f6f1ad8153906a8293e"
+  },
+  {
+   "module": "RHTriple.PairGammaPrimeGap",
+   "rc": 0,
+   "seconds": 4.5,
+   "errors": 0,
+   "warnings": 1,
+   "sorryAx": 0,
+   "src_sha256": "898a51bb090462d9d87abb9b014a252889488037ed55fbfb727c31820b58f67c",
+   "olean_sha256": "7591a2e442e51c9042d4ed4b9b8aed6067a386ab602659b2931aacf0599d737d"
+  },
+  {
+   "module": "RHTriple.PairHeight",
+   "rc": 0,
+   "seconds": 4.1,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "5288ca3dede25844708b2df0fe06229ba6fae3926ae4613ad99ef8e405fa62b3",
+   "olean_sha256": "db7d0f3fcfeb6bf610d11604a40893b712627baea741bf2007ce09552d10c505"
+  },
+  {
+   "module": "RHTriple.PairIntegrated",
+   "rc": 0,
+   "seconds": 3.3,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "6f62f1b86d18fa507b3c69e7d028f795b5dd514a2334aab28d84357c47f5fba7",
+   "olean_sha256": "b8ae4c5f7a0c94f6ba59ed1eab5596420a2e040c520cd2808a7cc22c8589ee37"
+  },
+  {
+   "module": "RHTriple.PairMain",
+   "rc": 0,
+   "seconds": 3.0,
+   "errors": 0,
+   "warnings": 1,
+   "sorryAx": 0,
+   "src_sha256": "7511c24e6ac397305ad95756ec464e2fff260d0e5a40401410c60723051fbf00",
+   "olean_sha256": "6de3c0869b4eab340ef66c8c704f248eef682bc969dd059a27abefd6a6e327a3"
+  },
+  {
+   "module": "RHTriple.PairMarginalMain",
+   "rc": 0,
+   "seconds": 3.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "d0c1b1adf9a41f1b927fb95b5006d7b887802d80bfc47c1476b0b5700ba0ea95",
+   "olean_sha256": "7c15c0d3bfdc08990d5ebed8c8ced917a10e240e9c1ebf34f6020a0c7de95b54"
+  },
+  {
+   "module": "RHTriple.PairMarginals",
+   "rc": 0,
+   "seconds": 3.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "cdec0a9e5c786ec1874c13dc1029657e39a6a034cad4ba873b8f50bffba9bd93",
+   "olean_sha256": "135e2350bec7619fe2a8f4b135b5807b7b666f6382482df2a09c10c35802ceb1"
+  },
+  {
+   "module": "RHTriple.PairPrimeL1",
+   "rc": 0,
+   "seconds": 3.3,
+   "errors": 0,
+   "warnings": 2,
+   "sorryAx": 0,
+   "src_sha256": "81889e0f8f2cb01a313d1e9fb4ffd20ac616c2569cac384eddb04a090813bbac",
+   "olean_sha256": "4e810bf204226e00d1dbf66e7278313df9889130ade097ca6d95e26b375e013a"
+  },
+  {
+   "module": "RHTriple.PairPrimeMain",
+   "rc": 0,
+   "seconds": 5.1,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "369195f5b02b393b15234b7d0da0c83b17f36210a9761a2648420ae182c670c3",
+   "olean_sha256": "42ba2c52f3ffda421cdd8fc32948629d73a37cc0a957d4120ff6e23917f0dab5"
+  },
+  {
+   "module": "RHTriple.PairPrimeRescale",
+   "rc": 0,
+   "seconds": 3.3,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "1931bc485d11ab6ecd3acc1bceec728b1ef29a083af090b296eeead78c3c2835",
+   "olean_sha256": "661430fa9deb80845b189a9dc0be1234df782ff4722b3def999bdfd6b519167b"
+  },
+  {
+   "module": "RHTriple.PairPrimeSeparation",
+   "rc": 0,
+   "seconds": 3.2,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "76ad98329ebcade0c66f9104a82d62611c79927dc6e83a6550fe9c0fb0279a2d",
+   "olean_sha256": "9aed7d38929f52fdc912a2589d2715c328a2f4a5ff2afaf617fb31e78972962d"
+  },
+  {
+   "module": "RHTriple.PairRemainder",
+   "rc": 0,
+   "seconds": 5.8,
+   "errors": 0,
+   "warnings": 2,
+   "sorryAx": 0,
+   "src_sha256": "d5cd1de3c220d157efa1861262e008c3224aaabde31d1fe691c48b81025a2313",
+   "olean_sha256": "d66904d0e5d3bddf3127f1ecbe571c7b675813c6e820daecfc99e59d8a22c582"
+  },
+  {
+   "module": "RHTriple.PairedLimit",
+   "rc": 0,
+   "seconds": 3.4,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "1c3cb734659299500ee53388293ed715ee8fbaad9c629acf4b01fd5a3d00d535",
+   "olean_sha256": "589f64cf1692861c09b1e7e7da37c7ea7e46c31dab3dc9b7bb0e8e6aaf1ebc84"
+  },
+  {
+   "module": "RHTriple.PolarFactor",
+   "rc": 0,
+   "seconds": 3.4,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "a07b8bd758be7d7009632e3db7903b06e3ddb82145777a39a7fad6dc650b9f0a",
+   "olean_sha256": "973f628f601aede2ebd893e6e23c83f23c55253c62b2bf5e1192bf9a578f2553"
+  },
+  {
+   "module": "RHTriple.PolarGate",
+   "rc": 0,
+   "seconds": 3.7,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "3d12afa7e08cc6c91be4b3ed133195e8fb02c954fa1e289de24045a398a0106d",
+   "olean_sha256": "dce92d1a86cc1d3f49db9a0e32373d1594d0c19bf2cc0e92a222e50de89ea552"
+  },
+  {
+   "module": "RHTriple.PolarPlane",
+   "rc": 0,
+   "seconds": 3.8,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "1369bfac4f83cce2653c7d2800e221be45646f6a3368f3fcdd3ce150bfb943d1",
+   "olean_sha256": "29e78954ede8fbe21d8be3f83ab97ab0f8ba42b2b70db604cd48dafaf1339293"
+  },
+  {
+   "module": "RHTriple.PolarPrime",
+   "rc": 0,
+   "seconds": 3.3,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "1a815da871efd3653eec7739eaa958f0ea64085f7d06e82dada24e80563f349a",
+   "olean_sha256": "797b57591a88fdef4ebc106e6e045ff3a44692bfe0490c9975a6591d828b01e5"
+  },
+  {
+   "module": "RHTriple.PrimeArithmetic",
+   "rc": 0,
+   "seconds": 11.5,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "06357ffcc58eef44764b5c547f89438e61c693c66a17b77728b78c1d8f4f410f",
+   "olean_sha256": "85977ea94951477f649fe596b3e5614b18d338144fb422dc1079eae71cc963e0"
+  },
+  {
+   "module": "RHTriple.PrimeKernel",
+   "rc": 0,
+   "seconds": 5.4,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "259e06e79e8f02e7f0f814f94058acf79b9b23de09e3a4eed1f1a4212b795b3a",
+   "olean_sha256": "2d502cb458ee97c7c27a236d441f2cf9c14a4e2748ab5775b29a03e05cfde3ba"
+  },
+  {
+   "module": "RHTriple.PrimePairWeight",
+   "rc": 0,
+   "seconds": 3.6,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "b8ceb84f2d1ed5f6d5441dc43531f0b257e8b4dc9a75390ecdc42877ed4b5665",
+   "olean_sha256": "0aebb798679302f45381d63a20b4713611d5355183c470ebfc6109892687d858"
+  },
+  {
+   "module": "RHTriple.SingletonMain",
+   "rc": 0,
+   "seconds": 3.2,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "980c8bdb12c0cde9600ddf84ed1fea154962a674c68ea3cb0148ccd14e8da065",
+   "olean_sha256": "1933ad4e025af21adac9a7c204be2ba8f10f87fa52d5625f57a6810683d62570"
+  },
+  {
+   "module": "RHTriple.SlotBlocks",
+   "rc": 0,
+   "seconds": 8.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "779c04962d342cbdca29fe68696d4ca7b73d7006e8c6821d0799eafe726372c9",
+   "olean_sha256": "5d84a4c91195959ef854c932806926e731ec100b8152e8103f39b9c26d49694b"
+  },
+  {
+   "module": "RHTriple.SlotExclusion",
+   "rc": 0,
+   "seconds": 23.3,
+   "errors": 0,
+   "warnings": 1,
+   "sorryAx": 0,
+   "src_sha256": "9231c01065d0e275a8de66f1e0677006f9b00c251d0b33a1e792a4d2071abdee",
+   "olean_sha256": "854a1bcb1f0d582a4f037dcc297f66a25551684bae6d04e869824af7ece410df"
+  },
+  {
+   "module": "RHTriple.TripleMain",
+   "rc": 0,
+   "seconds": 3.8,
+   "errors": 0,
+   "warnings": 1,
+   "sorryAx": 0,
+   "src_sha256": "fe6c33bd2700d2b377e99c556b5142fc99ef2a400021f3e0cdbf7d129f5cbd7f",
+   "olean_sha256": "687bb7ff022d3d159b383a5c0e3decbc75cc0ec092af62214d8470e4e1f98a7c"
+  },
+  {
+   "module": "RHTriple.TriplePrimeAssembly",
+   "rc": 0,
+   "seconds": 3.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "711b511cc2f5b6efc2555082a4dba91ed0110157fc8d6ddca582c346669df98f",
+   "olean_sha256": "b41b367bc4cf2c68e3d71d4cecee3cff5e3ce244b104104e433988a16024cc8a"
+  },
+  {
+   "module": "RHTriple.TriplePrimeDiagonal",
+   "rc": 0,
+   "seconds": 2.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "77af10313a99d9db81979a15f44abb715932e6801480cdba2153690831aaa524",
+   "olean_sha256": "008fbec853841ada6a754778b118f9a59efa9d974302cff50ebcc53acb389b4d"
+  },
+  {
+   "module": "RHTriple.TriplePrimeGate",
+   "rc": 0,
+   "seconds": 3.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "969fc23e01a5afbdc6aa5bdab8f74f8e57e72c7a0b32062e899c04649f128983",
+   "olean_sha256": "2f264575b12ac47ec0664518adb7ce5d1dc92bfed2ad6dfc6208c6c09555d851"
+  },
+  {
+   "module": "RHTriple.TriplePrimeSymmetry",
+   "rc": 0,
+   "seconds": 2.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "0649f1f0b1c0683120af323b609e3c050f01591b9e5930760877c8f3bee4d8da",
+   "olean_sha256": "5b73b67a40fe598582dc710fd66578d20590bc4a5f48f534ab95e452d0272221"
+  },
+  {
+   "module": "RHTriple.ZetaScale",
+   "rc": 0,
+   "seconds": 3.2,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "201ee2d6f5ac8549ad2a33853bcc3df18dd4c876bb6189baf142499191296dd8",
+   "olean_sha256": "3922e4545a4e8fd2c6e42dc176d2afaaf4c0637b8d1e2f3ed61755bc1e5a739e"
+  },
+  {
+   "module": "RHTriple.ZetaSlotSieve",
+   "rc": 0,
+   "seconds": 16.5,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "22e26caad17221ce1f9dd84aef212ece2b7b4a439217f392abe29547d4b2079e",
+   "olean_sha256": "68ebb075a9f923b0c45eb7414d0f2fea20ebf3311cffd8dae4ab93afb6343b4e"
+  },
+  {
+   "module": "RHTriple.ZetaSlotWeights",
+   "rc": 0,
+   "seconds": 2.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "f250f1ac239398cd188add0227d5d04ae23680854c52916c90bde09358be1d49",
+   "olean_sha256": "351ff5431bbfa08ce95eb1429a9363d13bb5d8272905a8aa0cd6aa2860eebe70"
+  },
+  {
+   "module": "RHTripleIntegration.CertificateBound",
+   "rc": 0,
+   "seconds": 6.2,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "76b265c213680acdfa7d70f07f826cf64102c07dba5644deacb9a421d094ca3e",
+   "olean_sha256": "d23dbb8a324d9cb40083f03b1ce292f549a040216ce8d174c6a7c4dd3efd28ca"
+  },
+  {
+   "module": "RHTripleIntegration.CertificateLimit",
+   "rc": 0,
+   "seconds": 5.4,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "72effbaca7179f17438744f49eec534765815a126204cfad09012db0b97c6df0",
+   "olean_sha256": "51e3a12a29b660e0240ece2db61e6eb8a06bca82117941d8975ff99d16021cd9"
+  },
+  {
+   "module": "RHTripleIntegration.CertificateNormalize",
+   "rc": 0,
+   "seconds": 4.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "8a497fea2c3e18d841bf8ed783ccd98f13ed9f6c6013322e16ed56493635a6e9",
+   "olean_sha256": "4139781dd2e56a68d9c4dc90fae0967cde664a790e60748f3ead1c0ca1d107e0"
+  },
+  {
+   "module": "RHTripleIntegration.SimpleProportion",
+   "rc": 0,
+   "seconds": 4.1,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "9406b8ef225360c34dffe81e957160e8375a5ecbdef56024f86aeaee22d45078",
+   "olean_sha256": "ad4e21c5d324bbf7238e0b94e878c7ea9d896f93f04643664828cde0447ad697"
+  },
+  {
+   "module": "TripleCorrelation.CertFinal",
+   "rc": 0,
+   "seconds": 5.5,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "efc2cff555d96a4b37fee65a20852af49bccdb25b097ba8c4b6e57833d895df6",
+   "olean_sha256": "739eaaddbd0dc85d70e41d807794ff8c5af69b0406264a4823ec065cbbe4a4d3"
+  },
+  {
+   "module": "TripleCorrelation.Checker",
+   "rc": 0,
+   "seconds": 1.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "4d36ff8142af17d08cc88f72c0f2cd088c7fa82ced3968bcf3b58c01f2836c85",
+   "olean_sha256": "8d48c6f2cec938bd5624e9d7b5ccd5e0bd56dbe3dbf32f4d6cf9cc52756dc511"
+  },
+  {
+   "module": "TripleCorrelation.CheckerInt",
+   "rc": 0,
+   "seconds": 1.7,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "ab9cc67cbc4172d5580a9355346fa94cb98ea71ee3750696e7b836b7a7b92ef4",
+   "olean_sha256": "cadcb2b3946065141a7b766fd00f9c08a66e210c02354bef5e53a5e8f132d93a"
+  },
+  {
+   "module": "TripleCorrelation.CheckerPack",
+   "rc": 0,
+   "seconds": 2.5,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "d80d411bcaf4fde8c6bcddde2752ec9fa1cba00ce913c54aae846107891729a7",
+   "olean_sha256": "6fad04ad62aebbf27c556a8ce34db81d0b8fae4dda902313ae8f67d025b16ac9"
+  },
+  {
+   "module": "TripleCorrelation.D20Pack",
+   "rc": 0,
+   "seconds": 39.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "f3fd72a40cc92a984f6e8fca15c87073dd2fd8a6fceef0ca352f919a447da94a",
+   "olean_sha256": "f2e8fb6af1dc7ae980e1a9130b458ca573e5d168666cb0a7e23c64ad9051f85d"
+  },
+  {
+   "module": "TripleCorrelation.GateReal",
+   "rc": 0,
+   "seconds": 9.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "4da6c6c7b4c55dc6a979a49ddd38ce0c295bf9f4aa10a76d2eb52b2d6db098fb",
+   "olean_sha256": "c1f4d072d632a31a0a55ddf370f338db579f07eda5f3adf42cdd2917b4a9f0e8"
+  },
+  {
+   "module": "TripleCorrelation.GateRegion",
+   "rc": 0,
+   "seconds": 3.8,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "1c8694819965bd5243c07b875764fd47e35267584e3b9a7fe871819e16b9fc02",
+   "olean_sha256": "4f95f277eec6602cf673397b60269883b4e830fd407377642d63b594eb6bfb15"
+  },
+  {
+   "module": "TripleCorrelation.Generic",
+   "rc": 0,
+   "seconds": 3.8,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "4b06eadfcd627aced50ed006ff1502ef7a39be2e80ef56350ffadfc4a8b3d677",
+   "olean_sha256": "23cc79bedd34ae00c9911bb5f326c27e0859f37945bd20cdbe598451a23b84d9"
+  },
+  {
+   "module": "TripleCorrelation.HexLink",
+   "rc": 0,
+   "seconds": 37.9,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "ee91125721baa1edca306eb0f3c484c3a3f6dd431c41544e8c7e27521bdebee7",
+   "olean_sha256": "ab20f6d0e9563d7abaaf4a3386753c9b7cc7fd9f438e81978db875a88105cde7"
+  },
+  {
+   "module": "TripleCorrelation.Hexagon",
+   "rc": 0,
+   "seconds": 11.8,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "e5811d9feaf9e1d78551016f512bfe98cb8d5061e9d375c0c233a86664b3ab3f",
+   "olean_sha256": "05a30490f618c8bea916bc91853454e72cb578b014b619a27e51dfa3d96c5a15"
+  },
+  {
+   "module": "TripleCorrelation.J3Region",
+   "rc": 0,
+   "seconds": 6.7,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "e51a86b08b15c9b41fe22ea033f5b27506d367f6f5ae8fc28a5959efbbfa4c3d",
+   "olean_sha256": "2e50360189f98e9723ae7f7f37aec7e57dfb22e1c4df68031b9a9c7d448c05d8"
+  },
+  {
+   "module": "TripleCorrelation.J4Final",
+   "rc": 0,
+   "seconds": 5.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "a9975df907d4963e64b8ed4f55db5c80ac4384870aa47ddbe75509f312728b43",
+   "olean_sha256": "d47eaf1c09a64bd372c0d488e407bdcfdbce9ed50e4afc2fa383ea20d8c44b9d"
+  },
+  {
+   "module": "TripleCorrelation.J4Outer",
+   "rc": 0,
+   "seconds": 5.2,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "3e22e4f6c47ccd95ca9711cc4d2f512bf2cf6893944ee61f6f13eeab6631b99d",
+   "olean_sha256": "d41ae010a31405de3c33ef99a11c69e5c92ed36d2e9830a0acfadeb8198c531f"
+  },
+  {
+   "module": "TripleCorrelation.J4Slice",
+   "rc": 0,
+   "seconds": 5.8,
+   "errors": 0,
+   "warnings": 2,
+   "sorryAx": 0,
+   "src_sha256": "bdcc8c5ad14e554dbcf816b021311ca88e9ab219053b64dd6fa5ff90d0ab594d",
+   "olean_sha256": "c1498a32bd96e2a8ca54a1774033b78def5d5cc41ad2ca910a8daf26fa9ab1e3"
+  },
+  {
+   "module": "TripleCorrelation.Jacobian",
+   "rc": 0,
+   "seconds": 4.8,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "ea151ace839dcbb0a63daa4656f5da7c0247a40172808e7318be81e034883744",
+   "olean_sha256": "749d6a4d6c85860c4ca61a034c13f8f47b52d05b8aa58f71aa0bc237aeb1dabc"
+  },
+  {
+   "module": "TripleCorrelation.Nu3Continuity",
+   "rc": 0,
+   "seconds": 12.5,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "d6d9410cf84e02d4f2de1e8e4e23d3cfd40ddfbe58399d4dfe2e26e099f395b9",
+   "olean_sha256": "6f7f9a19186ee4ec78c91b5e99a11933f2bdb4212ffd5fc67cd35db7939a4dcf"
+  },
+  {
+   "module": "TripleCorrelation.Nu3InclExcl",
+   "rc": 0,
+   "seconds": 6.1,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "952ed2e72345d429419f869f930d954bae15712a0fbd3208c55165e5f9dc8d59",
+   "olean_sha256": "a980a5630c245bab11fb44abb0a0f4abd853289feca2256ed1b4173d57d9e46d"
+  },
+  {
+   "module": "TripleCorrelation.P20",
+   "rc": 0,
+   "seconds": 2.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "6642eacdf205811bb1032f49425e1394fe51d1f7e16ec7d50414ed7d370bc5d3",
+   "olean_sha256": "1e6806fbfaff507d0d22e4102c88e0058662767a98d62ebc35fd990b5e73a40b"
+  },
+  {
+   "module": "TripleCorrelation.PackSound",
+   "rc": 0,
+   "seconds": 7.2,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "cb5296a99b49b884587721b352360ffa06deca143b63e8e8ff14428a281c9646",
+   "olean_sha256": "8681de82705bd1d4afbec1c997fac7bc6c71a11c802d8baee6b110f2ae22bfcf"
+  },
+  {
+   "module": "TripleCorrelation.Phi0Props",
+   "rc": 0,
+   "seconds": 4.5,
+   "errors": 0,
+   "warnings": 1,
+   "sorryAx": 0,
+   "src_sha256": "9c7673c90807ca737abe472875516d20846ee4e75443d9d858f8d1ff22afa65c",
+   "olean_sha256": "4c72f04c08fe07b9163a99c2f48638d3f0a7174903c6486e99b735f5762eeed8"
+  },
+  {
+   "module": "TripleCorrelation.Sem",
+   "rc": 0,
+   "seconds": 7.7,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "32ae6b99de0f6c6483958b409b22e2d185d6be7dd8bf0ad6d73ace406070b99a",
+   "olean_sha256": "7d658498a718bc0666d3a249bff928f6a5f69d5e24740cfc3414f3b889ad2940"
+  },
+  {
+   "module": "TripleCorrelation.SemCheck",
+   "rc": 0,
+   "seconds": 8.0,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "39d56de05f3c7f9b05dc278db649d8aea8803adaeb7dc736fb6b122b1e752d59",
+   "olean_sha256": "7435783ee5015a006a75cce6eb65539c3dd1c275d27a059f823d6e8ba8793a2e"
+  },
+  {
+   "module": "TripleCorrelation.SymReduce",
+   "rc": 0,
+   "seconds": 4.8,
+   "errors": 0,
+   "warnings": 0,
+   "sorryAx": 0,
+   "src_sha256": "1ce88638ec18fa709a2739b5db41769c76366e9c2a673ca6d5e4dc8bd22f97eb",
+   "olean_sha256": "fb61f726e3d0e004ac4ce199e58ce4a0421a96002c29c9d421749a8cde9f6eb3"
+  }
+ ],
+ "audited_commit": "592e3a5"
+}

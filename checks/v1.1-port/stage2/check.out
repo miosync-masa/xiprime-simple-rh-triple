@@ -1,0 +1,15 @@
+XiPrime8845.RHTripleIntegration.xiPrime_simple_proportion_c20 : RiemannHypothesis →
+  1 - XiPrime8845.RHTripleIntegration.c20 / 3 ≤
+    Filter.liminf (fun T => ↑(Zeta23.XiPrime.N0simple 0 T) / ↑(Zeta23.XiPrime.Ncount 0 T)) Filter.atTop
+XiPrime8845.RHTripleIntegration.xiPrime_simple_proportion_ge_9742 : RiemannHypothesis →
+  0.9742 ≤ Filter.liminf (fun T => ↑(Zeta23.XiPrime.N0simple 0 T) / ↑(Zeta23.XiPrime.Ncount 0 T)) Filter.atTop
+'XiPrime8845.RHTripleIntegration.xiPrime_simple_proportion_c20' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'XiPrime8845.RHTripleIntegration.xiPrime_simple_proportion_ge_9742' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+def XiPrime8845.RHTripleIntegration.c20 : ℝ :=
+77223 / 1000000
+def RiemannHypothesis : Prop :=
+∀ (s : ℂ), riemannZeta s = 0 → (¬∃ n, s = -2 * (↑n + 1)) → s ≠ 1 → s.re = 1 / 2
