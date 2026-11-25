@@ -1,0 +1,22 @@
+start 11:17:56
+leanchecker found a problem in RHTripleIntegration.Unconditional
+uncaught exception: object file '/Users/iizumimamichi/C-Weil-Hunt/v11-stage3/ours-out/obj/RHTripleIntegration/Unconditional.olean' of module RHTripleIntegration.Unconditional does not exist
+      354.85 real        40.59 user       302.64 sys
+          8816558080  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             4219577  page reclaims
+              506838  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+              297121  voluntary context switches
+             2113573  involuntary context switches
+       2748974806930  instructions retired
+       1447779249689  cycles elapsed
+         25979639344  peak memory footprint
+rc=1 end 11:23:51

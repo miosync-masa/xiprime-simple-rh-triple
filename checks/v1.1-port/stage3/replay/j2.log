@@ -1,0 +1,22 @@
+start 11:17:56
+time: command terminated abnormally
+     4861.09 real       540.92 user      4179.21 sys
+          9668968448  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             6969362  page reclaims
+              127695  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+              788491  voluntary context switches
+            19365805  involuntary context switches
+      42875174646975  instructions retired
+      20054437626364  cycles elapsed
+        100019503984  peak memory footprint
+time: signal: Invalid argument
+rc=1 end 12:38:58
