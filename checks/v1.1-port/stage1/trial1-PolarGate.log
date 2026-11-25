@@ -1,0 +1,35 @@
+lean/RHTriple/PolarGate.lean:210:2: error: Tactic `apply` failed: could not unify the conclusion of `@Asymptotics.IsLittleO.sum`
+  (∑ i ∈ ?s, ?A i) =o[?l] ?g'
+with the goal
+  (fun T =>
+      ∑ js,
+        if js.1.1 = 0 ∨ js.1.2 = 0 ∨ js.2 = 0 then mixedEFIntegral k Φ (1 - η / 4) T js.1.1 js.1.2 js.2
+        else 0) =o[atTop]
+    fun T => T * Real.log T
+
+Note: The full type of `@Asymptotics.IsLittleO.sum` is
+  ∀ {α : Type ?u.87} {E' : Type ?u.86} {F' : Type ?u.85} [inst : SeminormedAddCommGroup E']
+    [inst_1 : SeminormedAddCommGroup F'] {g' : α → F'} {l : Filter α} {ι : Type ?u.84} {A : ι → α → E'} {s : Finset ι},
+    (∀ i ∈ s, A i =o[l] g') → (∑ i ∈ s, A i) =o[l] g'
+
+k : ℝ → ℂ
+Φ : ℝ × ℝ → ℂ
+hk : ContDiff ℝ 2 k
+hkc : HasCompactSupport k
+hΦ : Continuous Φ
+hΦc : HasCompactSupport Φ
+η : ℝ
+hη : 0 < η
+hhex : ∀ (x : ℝ × ℝ), Φ x ≠ 0 → |x.1| + |x.2| + |x.1 + x.2| ≤ 2 - η
+⊢ (fun T =>
+      ∑ js,
+        if js.1.1 = 0 ∨ js.1.2 = 0 ∨ js.2 = 0 then mixedEFIntegral k Φ (1 - η / 4) T js.1.1 js.1.2 js.2
+        else 0) =o[atTop]
+    fun T => T * Real.log T
+'XiPrime8845.RHTriple.pole_last_isLittleO' depends on axioms: [propext, Classical.choice, Quot.sound]
+'XiPrime8845.RHTriple.any_pole_isLittleO' depends on axioms: [propext, Classical.choice, Quot.sound]
+'XiPrime8845.RHTriple.polarRemainder_isLittleO' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'XiPrime8845.RHTriple.smoothedTriple_sub_survivors_isLittleO' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
