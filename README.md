@@ -4,7 +4,7 @@ Lean 4 proof that, assuming the Riemann hypothesis, more than 97.42% of the zero
 
 Author: **Masamichi Iizumi** · Miosync, Inc., Tokyo, Japan · ORCID [0009-0007-0755-403X](https://orcid.org/0009-0007-0755-403X)
 
-DOI: [TODO: reserved Zenodo DOI]
+DOI (v1.0.0): [10.5281/zenodo.24454639](https://doi.org/10.5281/zenodo.24454639) · DOI (v1.1): [TODO: reserved Zenodo DOI]
 
 ## The theorem
 
@@ -108,7 +108,7 @@ Steps and hashes: [`checks/v1.1-port/stage3/`](checks/v1.1-port/stage3/) (audit 
 | 1 | Under RH, zeros of $\xi'$ = simple zeros on the line + $\sum_{m_\rho\ge3}(m_\rho-1)$ over zeros of $\zeta$ | `Ncount_eq` |
 | 2 | Smoothed three-point correlation of $\zeta$ for distinct zero slots, Fourier support in the hexagon $\lvert u\rvert+\lvert v\rvert+\lvert u+v\rvert<2$ | `zeta_smoothed_distinct_triple_main_count` |
 | 3 | Collision extraction for $M_3=\sum m(m-1)(m-2)$, removal of height smoothing, dyadic summation | `FactorialMoment`, `HeightMajorant`, `CertificateLimit` |
-| 4 | Degree-20 test function of Gonçalves–de Laat–Leijenhorst, kernel-checked: $\nu_3^F(\Phi_0)/\operatorname{mass}(\Phi_0)\le c_{20}$ | `P20_nu3` |
+| 4 | Degree-20 test function of Gonçalves–de Laat–Leijenhorst, kernel-checked: $\nu_3^F(\Phi_0)/\mathrm{mass}(\Phi_0)\le c_{20}$ | `P20_nu3` |
 | 5 | Shrink-and-mollify family with nonnegative inverse transform; the bound passes to the limit | `CertificateSmoothing`, `planeInverse_real_autocorrelation` |
 | 6 | $3(m-1)\le m(m-1)(m-2)$ for $m\ge3$, inserted into the bridge | `simple_proportion_of_highZeros_bound` |
 
