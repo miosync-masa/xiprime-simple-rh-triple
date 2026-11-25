@@ -56,6 +56,8 @@ Source: https://proofsandreasons.io/rh-oleans.html, files under
 - 14 archives, 34,269,336,477 bytes (31.92 GiB). SHA-256 of each was computed **before
   extraction** and equals the release's `SHA256SUMS` (copy: `release-SHA256SUMS`). No archive
   member had an absolute path or `..`.
+- Extracted size: 100,864,539,684 bytes (93.94 GiB) in 288,207 files: `lib/` 88.09 GiB,
+  `deps/` 5.85 GiB. (Stage 1 had read 89 GiB + 6 GiB from the release page.)
 - After extraction: 175,187 project `.olean` files; all 175,187 equal the per-module list
   `SHA256SUMS-project-oleans.txt.gz` (0 different, 0 missing; `release-olean-hash-check.json`).
 - `lib/Main.olean`: `9146dfb4148e24d2252e04c50742f3e49dd126dfcc5006d10bf5f873ddf796ad`
