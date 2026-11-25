@@ -1,0 +1,30 @@
+XiPrime8845.RHTripleIntegration.xiPrime_simple_proportion_c20_unconditional :
+  1 - XiPrime8845.RHTripleIntegration.c20 / 3 ≤
+    liminf (fun T => ↑(Zeta23.XiPrime.N0simple 0 T) / ↑(Zeta23.XiPrime.Ncount 0 T)) atTop
+XiPrime8845.RHTripleIntegration.xiPrime_simple_proportion_ge_9742_unconditional :
+  0.9742 ≤ liminf (fun T => ↑(Zeta23.XiPrime.N0simple 0 T) / ↑(Zeta23.XiPrime.Ncount 0 T)) atTop
+'XiPrime8845.RHTripleIntegration.xiPrime_simple_proportion_c20_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'XiPrime8845.RHTripleIntegration.xiPrime_simple_proportion_ge_9742_unconditional' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+     1204.20 real        23.86 user       150.61 sys
+          5292048384  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             1769633  page reclaims
+            11794817  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+              341278  voluntary context switches
+            11856326  involuntary context switches
+       1194557378874  instructions retired
+        753235749455  cycles elapsed
+          5720564568  peak memory footprint
+rc=0

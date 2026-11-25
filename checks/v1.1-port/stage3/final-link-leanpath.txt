@@ -1,0 +1,11 @@
+alp-oleans-dl/x/alp-oleans/deps/batteries
+alp-oleans-dl/x/alp-oleans/deps/Qq
+alp-oleans-dl/x/alp-oleans/deps/aesop
+alp-oleans-dl/x/alp-oleans/deps/proofwidgets
+alp-oleans-dl/x/alp-oleans/deps/importGraph
+alp-oleans-dl/x/alp-oleans/deps/LeanSearchClient
+alp-oleans-dl/x/alp-oleans/deps/plausible
+alp-oleans-dl/x/alp-oleans/deps/mathlib
+alp-oleans-dl/x/alp-oleans/lib
+v11-stage3/af-out/obj
+v11-stage3/ours-out/obj
