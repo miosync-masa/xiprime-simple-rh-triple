@@ -1,0 +1,8 @@
+module	rc	real_s	maxrss_bytes	peak_footprint_bytes
+Zeta23	0	2.49	5685559296	1171873696
+Zeta23.PrimeSideA	0	2.25	5628461056	1169884128
+Zeta23.Taper	0	2.20	5618122752	1165591256
+Zeta23.XiPrime.Coeff	0	1.22	3203006464	894604968
+Zeta23.XiPrime.ExplicitFormula	0	1.28	3411705856	917676048
+Zeta23.XiPrime.QuarticWindow	0	2.16	5655019520	1170035088
+Zeta23.XiPrime.ZeroCount	0	1.32	3411886080	917020568

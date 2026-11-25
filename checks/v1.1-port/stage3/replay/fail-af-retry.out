@@ -1,0 +1,21 @@
+leanchecker found a problem in Zeta23.Taper.Params
+uncaught exception: failed to read file '/Users/iizumimamichi/C-Weil-Hunt/alp-oleans-dl/x/alp-oleans/deps/mathlib/Mathlib/Analysis/Distribution/AEEqOfIntegralContDiff.olean'
+       94.00 real        20.38 user       104.99 sys
+         13503578112  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             9399617  page reclaims
+              382498  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+             1421857  voluntary context switches
+             2015198  involuntary context switches
+        656012202758  instructions retired
+        513559668102  cycles elapsed
+         52923421784  peak memory footprint
+rc=1

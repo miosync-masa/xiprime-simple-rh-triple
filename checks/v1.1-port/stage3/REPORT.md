@@ -25,8 +25,8 @@ from the entry module `Main` of the compiled release. `#print axioms` for both:
 | The two new theorems | Lean 4.33.1 elaborator and kernel, one compilation importing `Main` | accepted |
 | Axioms of the two new theorems | `#print axioms` in that compilation | the three standard axioms |
 | The 5 modules of `RHTripleIntegration` (incl. `Unconditional`) | `leanchecker` (shipped with Lean 4.33.1), replay in the kernel | rc 0 |
-| The other 85 modules of this repository | `leanchecker` | **not completed** (process terminated abnormally) |
-| The 317 modules of AF | `leanchecker` | **not completed** (machine reset) |
+| The other 85 modules of this repository | `leanchecker`, one module per process | 85/85 rc 0 |
+| The 317 modules of AF | `leanchecker` for 310, `tools/ReplayOne.lean` for 7 | 317/317 rc 0 |
 | The 175,187 modules of the release | — | **not re-checked here in any way** |
 | comparator | — | **not run** |
 | A negative control for `leanchecker` (a forged object) | — | **not run** |
@@ -43,8 +43,10 @@ from the entry module `Main` of the compiled release. `#print axioms` for both:
 - `#print axioms` reads the axioms recorded through the imported objects; it is as trustworthy
   as those objects.
 - The AF objects (317 modules) and our 89 modules were compiled here from source by Lean 4.33.1,
-  each declaration passing the kernel once at compile time. The replay by `leanchecker`, a
-  second pass, finished only for the 5 modules named above.
+  each declaration passing the kernel once at compile time. The replay is a second pass of the
+  same kernel over the stored declarations of all 407 modules. `leanchecker` describes itself as
+  "not an external verifier, simply a tool to detect environment hacking"; the replay is not an
+  independent check of the kernel.
 
 ## Downloaded files and hashes
 
@@ -98,25 +100,62 @@ No declaration-name collision occurred between the release, AF and this reposito
 | Maximum resident set size | 5,292,048,384 bytes |
 | Peak memory footprint | 5,720,564,568 bytes |
 
-## Replay with `leanchecker`: what happened
+## Replay in the kernel
 
-Command form: `LEAN_SYSROOT=<4.33.1 toolchain> PATH=<toolchain>/bin:$PATH LEAN_PATH=…
-leanchecker <modules…>`; five jobs started together at 11:17:56 (`replay/`).
+### Final state
 
-| Job | Modules | Outcome | Elapsed | Max RSS | Peak footprint |
-|---|---|---|---|---|---|
-| j1, attempt 1 | 5 (`RHTripleIntegration.*`) | rc 1 — **our path mistake**: `Unconditional.olean` was in a directory the search did not reach; the file was never read | 354.85 s | 8.82 GB | 25.98 GB |
-| j1, attempt 2 (12:20:58) | the same 5 | **rc 0** | 818.00 s | 10.48 GB | 34.75 GB |
-| j2 | 85 (rest of this repository) | **terminated abnormally** at 12:38:58, no verdict | 4861.09 s | 9.67 GB | 100.02 GB |
-| j3, j4, j5 | 317 (AF) | no verdict; machine reset at about 12:58 | — | — | — |
+| Set | Modules | Tool | Outcome |
+|---|---|---|---|
+| `RHTripleIntegration.*` incl. `Unconditional` (release on the path) | 5 | `leanchecker`, one process | rc 0 |
+| Rest of this repository | 85 | `leanchecker`, one process per module | 85 × rc 0 |
+| AF | 308 | `leanchecker`, one process per module | 308 × rc 0 |
+| AF: `Zeta23.MV`, `Zeta23.PrimeSideB` | 2 | `leanchecker` (retry) | rc 0 |
+| AF: `Zeta23`, `Zeta23.PrimeSideA`, `Zeta23.Taper`, `Zeta23.XiPrime.Coeff`, `.ExplicitFormula`, `.QuarticWindow`, `.ZeroCount` | 7 | `tools/ReplayOne.lean` | 7 × rc 0 |
 
-- No job reported a declaration rejected by the kernel. The failures are a wrong path (ours),
-  a killed process and a machine reset; the cause of the last two is taken to be memory
-  exhaustion (footprint of 100 GB on a 24 GiB machine; swap 11.8 of 13 GB in use at 12:21),
-  which is an inference from these numbers, not a diagnosed fact.
-- Running five replay jobs at once on this machine was our decision and was the mistake.
-- Following the instruction to stop and record on a memory failure, the replay was **not
-  restarted**.
+All 90 modules of this repository (89 + `Unconditional`) and all 317 modules of AF were
+replayed. No run reported a declaration rejected by the kernel. Per-module time and memory:
+`replay/serial-ours.tsv`, `replay/serial-af.tsv`, `replay/serial-af-retry.tsv`,
+`replay/one-af-parents.tsv`. Except for the first row, the release was not on the search path
+(`replay/leanpath-norelease.txt`): none of these modules imports it.
+
+### What went wrong on the way, in order
+
+1. **11:17, five jobs at once, release on the path, many modules per process** (`replay/j*.log`).
+   j1 attempt 1: rc 1, our path mistake (`Unconditional.olean` in a directory the search did
+   not reach; never read). j1 attempt 2 (12:20): rc 0, 818 s, peak footprint 34.75 GB.
+   j2 (85 modules in one process): terminated abnormally at 12:38:58 after 4861 s, peak
+   footprint 100.02 GB. j3–j5 (AF): no verdict; **the machine reset at about 12:58**.
+   Starting five such jobs together was our decision and our mistake.
+2. **13:10, one module per process, release off the path**: 85/85 rc 0 in 320 s; largest peak
+   footprint 3.58 GB (`TripleCorrelation.D20Pack`).
+3. **13:15, AF, same method**: the first module, the root `Zeta23`, hit the 900 s limit
+   (`serial-af-attempt1.tsv`); a second try was stopped by us at swap use of 27 GB.
+4. **13:36, AF without the root, guard at +6 GB swap or 300 s**: 308 rc 0; 8 stopped by the
+   guard (no verdict).
+5. **Retry of the 8 with guard at +18 GB**: `Zeta23.MV` rc 0, `Zeta23.PrimeSideA` stopped by
+   the guard, `Zeta23.PrimeSideB` rc 0, `Zeta23.Taper` **rc 1** with
+   `uncaught exception: failed to read file '…/Mathlib/Analysis/Distribution/AEEqOfIntegralContDiff.olean'`
+   reported for `Zeta23.Taper.Params` at a peak footprint of 52.9 GB (`replay/fail-af-retry.out`).
+   This is a failure to read a file, not a kernel rejection: the file's SHA-256 is unchanged
+   (`b88840c7…ece76d1e`), and `Zeta23.Taper.Params` had passed alone in step 4 and passed again
+   in step 6. We take it to be a resource failure; that is an inference.
+6. **`tools/ReplayOne.lean`** for the remaining 7: each rc 0 in 1–3 s, peak footprint ≤ 1.2 GB.
+
+### Cause of the memory growth (read from the source, `src/lean/LeanChecker.lean` of v4.33.1)
+
+- `leanchecker X` replays **every module whose name has prefix `X`**, not only `X`. So
+  `leanchecker Zeta23` means all 317 AF modules, and `leanchecker Zeta23.Taper` means
+  `Zeta23.Taper` and the 9 modules under `Zeta23/Taper/`.
+- All selected modules are replayed **as parallel tasks, each importing its own environment**.
+  Memory grows with the number of selected modules; 85 at once gave the 100 GB of step 1.
+- For each argument it lists **every `.olean` on the search path** to find the matches; with the
+  release (175,187 modules) on the path this alone is slow (the same single module: 50.5 s with
+  the release on the path, 12.1 s without).
+
+`tools/ReplayOne.lean` (SHA-256 `29e71f59…f0ae5e5`) contains the function `replayFromImports`
+copied verbatim from that source, with a driver that takes module names literally and replays
+them one after another. It returns 1 for a nonexistent module. It was used for the 7 modules
+only; it has not been reviewed by anyone else.
 
 ## Stage 1 and the outcome
 
@@ -129,10 +168,12 @@ Stage 1 made no prediction for stage 3. It listed these as unknown; the outcomes
 | Load time and memory of the release on this machine | final compilation: 1204 s, 5.7 GB peak |
 
 Stage 1's prediction for AF (pins only, 0 source lines changed) held in the from-scratch build.
-Nothing was written in advance about the memory need of the replay; it exceeded the machine.
+Nothing was written in advance about the memory need of the replay. Run as five parallel
+multi-module jobs it exceeded the machine; run one module at a time it needs at most 3.6 GB
+(34.7 GB footprint for the one job that imports the release).
 
 ## Not done
 
-comparator; independent kernels (nanoda, lean4lean) on our theorem; replay of 402 of our and
-AF's 407 modules; any re-check of the release; negative control of the replay tool; d = 50
+comparator; independent kernels (nanoda, lean4lean) on our theorem; any re-check of the release;
+negative control of the replay tools (a forged object that they should reject); d = 50
 (outside the closure, not ported).

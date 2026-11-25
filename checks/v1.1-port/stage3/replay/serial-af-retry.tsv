@@ -1,0 +1,6 @@
+module	rc	real_s	maxrss_bytes	peak_footprint_bytes	note
+Zeta23.MV	0	56.18	13423853568	35816316576	
+Zeta23.PrimeSideA	143	23.58	14608777216	60996426808	GUARD swap +18670MB at 22s
+Zeta23.PrimeSideB	0	82.52	14343733248	40165094688	
+Zeta23.Taper	1	94.00	13503578112	52923421784	
+STOP at Zeta23.Taper
