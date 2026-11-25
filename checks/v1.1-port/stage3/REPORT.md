@@ -118,14 +118,18 @@ leanchecker <modules…>`; five jobs started together at 11:17:56 (`replay/`).
 - Following the instruction to stop and record on a memory failure, the replay was **not
   restarted**.
 
-## Prediction and outcome
+## Stage 1 and the outcome
 
-| Stage 1 expectation | Outcome |
+Stage 1 made no prediction for stage 3. It listed these as unknown; the outcomes are:
+
+| Listed in stage 1 as unknown | Outcome |
 |---|---|
-| Objects of another platform may fail to load | loaded without error |
-| Name collisions possible | none |
-| Memory of the final compilation may exceed 24 GiB | 5.7 GB peak |
-| (no expectation recorded for the replay) | replay exceeded the machine; incomplete |
+| Whether declaration names of the release collide with AF's or ours | no collision |
+| Whether objects built on x86_64 Linux load on arm64 macOS | loaded without error |
+| Load time and memory of the release on this machine | final compilation: 1204 s, 5.7 GB peak |
+
+Stage 1's prediction for AF (pins only, 0 source lines changed) held in the from-scratch build.
+Nothing was written in advance about the memory need of the replay; it exceeded the machine.
 
 ## Not done
 
