@@ -207,7 +207,7 @@ theorem polarRemainder_isLittleO {k : ℝ → ℂ} {Φ : ℝ × ℝ → ℂ}
     (hhex : ∀ x : ℝ × ℝ, Φ x ≠ 0 → |x.1|+|x.2|+|x.1+x.2| ≤ 2-η) :
     (fun T => polarRemainder k Φ (1-η/4) T) =o[atTop] (fun T => T*Real.log T) := by
   unfold polarRemainder
-  apply Asymptotics.IsLittleO.sum
+  apply Asymptotics.IsLittleO.fun_sum
   intro js _
   by_cases h : js.1.1 = 0 ∨ js.1.2 = 0 ∨ js.2 = 0
   · simpa only [if_pos h] using any_pole_isLittleO hk hkc hΦ hΦc hη hhex _ _ _ h

@@ -88,9 +88,9 @@ theorem triplePrimeEF_isLittleO {k : ℝ → ℂ} {Φ : ℝ × ℝ → ℂ}
     (hΦ : Continuous Φ) (hΦc : HasCompactSupport Φ) {η : ℝ} (hη : 0 < η)
     (hhex : ∀ x : ℝ × ℝ, Φ x ≠ 0 → |x.1|+|x.2|+|x.1+x.2| ≤ 2-η) (p : ℝ) :
     (fun T => mixedEFIntegral k Φ p T 1 1 1) =o[atTop] (fun T => T*Real.log T) := by
-  have H := Asymptotics.IsLittleO.sum (s := (univ : Finset Bool)) (fun s _ =>
-    Asymptotics.IsLittleO.sum (s := (univ : Finset Bool)) (fun t _ =>
-      Asymptotics.IsLittleO.sum (s := (univ : Finset Bool)) (fun u _ =>
+  have H := Asymptotics.IsLittleO.fun_sum (s := (univ : Finset Bool)) (fun s _ =>
+    Asymptotics.IsLittleO.fun_sum (s := (univ : Finset Bool)) (fun t _ =>
+      Asymptotics.IsLittleO.fun_sum (s := (univ : Finset Bool)) (fun u _ =>
         signedTriple_any_isLittleO hk hkc hΦ hΦc hη hhex (fun T => ⌊T^p⌋₊) s t u)))
   refine H.neg_left.congr' ?_ Filter.EventuallyEq.rfl
   filter_upwards [eventually_gt_atTop (0:ℝ)] with T hT
