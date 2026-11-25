@@ -1,0 +1,8 @@
+prefix	rc	replaying_lines	real_s	maxrss_bytes	peak_footprint_bytes	note
+Zeta23.Taper	0	10	31.53	5074845696	626098400	
+Zeta23.PrimeSideA	0	13	27.85	5110562816	629916016	
+Zeta23.XiPrime.Coeff	0	19	22.33	5089918976	605570328	
+Zeta23.XiPrime.ExplicitFormula	0	16	18.69	2906734592	378692392	
+Zeta23.XiPrime.QuarticWindow	0	7	15.35	5106155520	628739800	
+Zeta23.XiPrime.ZeroCount	0	10	12.04	2866937856	376790240	
+Zeta23	0	317	419.30	5646925824	661512168	

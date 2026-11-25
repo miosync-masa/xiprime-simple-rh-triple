@@ -1,0 +1,32 @@
+replaying Zeta23.PrimeSideA
+replaying Zeta23.PrimeSideA.EndsE2
+replaying Zeta23.PrimeSideA.Defs
+replaying Zeta23.PrimeSideA.Bridge
+replaying Zeta23.PrimeSideA.EndsWeighted
+replaying Zeta23.PrimeSideA.EndsE1
+replaying Zeta23.PrimeSideA.CrossMuPCore
+replaying Zeta23.PrimeSideA.CrossMuP
+replaying Zeta23.PrimeSideA.Ends
+replaying Zeta23.PrimeSideA.EndsCore
+replaying Zeta23.PrimeSideA.Basic
+replaying Zeta23.PrimeSideA.EndsNu
+replaying Zeta23.PrimeSideA.MuMu
+       27.85 real        10.54 user        17.14 sys
+          5110562816  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             3788991  page reclaims
+                1041  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  19  voluntary context switches
+                5084  involuntary context switches
+        348429664741  instructions retired
+        126231279430  cycles elapsed
+           629916016  peak memory footprint
+rc=0

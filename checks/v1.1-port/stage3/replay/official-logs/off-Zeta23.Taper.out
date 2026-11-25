@@ -1,0 +1,29 @@
+replaying Zeta23.Taper.GevreyRamps
+replaying Zeta23.Taper.Fourier
+replaying Zeta23.Taper.Params
+replaying Zeta23.Taper.Basic
+replaying Zeta23.Taper.Gevrey
+replaying Zeta23.Taper.Decay
+replaying Zeta23.Taper.GevreyPhi
+replaying Zeta23.Taper.Norms
+replaying Zeta23.Taper.Strip
+replaying Zeta23.Taper
+       31.53 real         6.65 user        12.27 sys
+          5074845696  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             2109827  page reclaims
+              169242  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+               38313  voluntary context switches
+              137392  involuntary context switches
+        228693285581  instructions retired
+         85468015323  cycles elapsed
+           626098400  peak memory footprint
+rc=0

@@ -26,7 +26,7 @@ from the entry module `Main` of the compiled release. `#print axioms` for both:
 | Axioms of the two new theorems | `#print axioms` in that compilation | the three standard axioms |
 | The 5 modules of `RHTripleIntegration` (incl. `Unconditional`) | `leanchecker` (shipped with Lean 4.33.1), replay in the kernel | rc 0 |
 | The other 85 modules of this repository | `leanchecker`, one module per process | 85/85 rc 0 |
-| The 317 modules of AF | `leanchecker` for 310, `tools/ReplayOne.lean` for 7 | 317/317 rc 0 |
+| The 317 modules of AF | `leanchecker` (one run over the prefix `Zeta23`, one worker thread) | rc 0, 317 modules replayed |
 | The 175,187 modules of the release | — | **not re-checked here in any way** |
 | comparator | — | **not run** |
 | A negative control for `leanchecker` (a forged object) | — | **not run** |
@@ -156,6 +156,33 @@ replayed. No run reported a declaration rejected by the kernel. Per-module time 
 copied verbatim from that source, with a driver that takes module names literally and replays
 them one after another. It returns 1 for a nonexistent module. It was used for the 7 modules
 only; it has not been reviewed by anyone else.
+
+### Official `leanchecker` for everything (14:40–14:51)
+
+With `LEAN_NUM_THREADS=1` the tasks of `leanchecker` run one after another, and the memory
+stays at one environment. Run this way (`replay/official.sh`, `-v`, release off the path):
+
+| Prefix | Modules replayed | rc | Elapsed | Peak footprint |
+|---|---|---|---|---|
+| `Zeta23.Taper` | 10 | 0 | 31.5 s | 0.63 GB |
+| `Zeta23.PrimeSideA` | 13 | 0 | 27.9 s | 0.63 GB |
+| `Zeta23.XiPrime.Coeff` | 19 | 0 | 22.3 s | 0.61 GB |
+| `Zeta23.XiPrime.ExplicitFormula` | 16 | 0 | 18.7 s | 0.38 GB |
+| `Zeta23.XiPrime.QuarticWindow` | 7 | 0 | 15.4 s | 0.63 GB |
+| `Zeta23.XiPrime.ZeroCount` | 10 | 0 | 12.0 s | 0.38 GB |
+| `Zeta23` (all of AF) | 317 (317 distinct names in the log) | 0 | 419.3 s | 0.66 GB |
+
+So every one of the 90 + 317 modules has passed the official `leanchecker`; **no result in this
+record depends on `tools/ReplayOne.lean` any more.** Its 7 results agree with the official ones.
+Logs: `replay/official.tsv`, `replay/official-logs/`.
+
+### The tool and the closure
+
+`tools/ReplayOne.lean` contains `unsafe def` (as does the function it copies). It is a checking
+tool, outside the closure of the theorems: no file under `lean/` imports it or anything from
+`tools/`. Checked on this commit: the import roots occurring under `lean/` are `Mathlib`,
+`Zeta23`, `RHBridge`, `RHTriple`, `TripleCorrelation`, `RHTripleIntegration`, and `Main` (the
+last in `Unconditional.lean` only).
 
 ## Stage 1 and the outcome
 

@@ -1,0 +1,38 @@
+replaying Zeta23.XiPrime.Coeff
+replaying Zeta23.XiPrime.Coeff.PrimeSums
+replaying Zeta23.XiPrime.Coeff.LayerOne
+replaying Zeta23.XiPrime.Coeff.LT
+replaying Zeta23.XiPrime.Coeff.Param
+replaying Zeta23.XiPrime.Coeff.H3
+replaying Zeta23.XiPrime.Coeff.Upper
+replaying Zeta23.XiPrime.Coeff.DiagLaw
+replaying Zeta23.XiPrime.Coeff.Basic
+replaying Zeta23.XiPrime.Coeff.NonSquarefree
+replaying Zeta23.XiPrime.Coeff.LSeries
+replaying Zeta23.XiPrime.Coeff.ReexpansionGen
+replaying Zeta23.XiPrime.Coeff.Tail
+replaying Zeta23.XiPrime.Coeff.Abel
+replaying Zeta23.XiPrime.Coeff.MainTerm.Squarefree
+replaying Zeta23.XiPrime.Coeff.MainTerm.Asymp
+replaying Zeta23.XiPrime.Coeff.Reexpansion
+replaying Zeta23.XiPrime.Coeff.ReexpansionW
+replaying Zeta23.XiPrime.Coeff.PowerSums
+       22.33 real         8.56 user        13.47 sys
+          5089918976  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             2971660  page reclaims
+                 975  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  21  voluntary context switches
+               22894  involuntary context switches
+        259515417172  instructions retired
+         98599176000  cycles elapsed
+           605570328  peak memory footprint
+rc=0

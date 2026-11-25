@@ -1,0 +1,26 @@
+replaying Zeta23.XiPrime.QuarticWindow
+replaying Zeta23.XiPrime.QuarticWindow.Family
+replaying Zeta23.XiPrime.QuarticWindow.Params
+replaying Zeta23.XiPrime.QuarticWindow.ModWindow
+replaying Zeta23.XiPrime.QuarticWindow.ZeroSide
+replaying Zeta23.XiPrime.QuarticWindow.Moments
+replaying Zeta23.XiPrime.QuarticWindow.Quartic
+       15.35 real         5.47 user         9.75 sys
+          5106155520  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+             2054541  page reclaims
+                 938  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  52  voluntary context switches
+                2978  involuntary context switches
+        198353753024  instructions retired
+         69730242700  cycles elapsed
+           628739800  peak memory footprint
+rc=0

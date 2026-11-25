@@ -33,10 +33,13 @@ about 88 GB extracted) on `LEAN_PATH`, Lean v4.33.1 and the release's own Mathli
   (https://math.mit.edu/~drew/grh/).
 - We did **not** re-verify the release. For that, see the release's own page and the
   independent checks reported on Sutherland's page.
-- A second pass through the kernel (replay of the stored declarations, with `leanchecker` of
-  Lean 4.33.1 and, for 7 modules, with `tools/ReplayOne.lean`) passed for all 90 modules of
-  this repository and all 317 modules of AF. This is the same kernel again, not an independent
-  checker. comparator and independent kernels were not run by us.
+- A second pass through the kernel (replay of the stored declarations with `leanchecker` of
+  Lean 4.33.1) passed for all 90 modules of this repository and all 317 modules of AF. This is
+  the same kernel again, not an independent checker. comparator and independent kernels were
+  not run by us.
+- `tools/ReplayOne.lean` is a checking tool that copies `replayFromImports` from `leanchecker`;
+  it contains `unsafe def`. It is outside the closure of the theorems: no module under `lean/`
+  imports anything from `tools/`. No result reported here depends on it.
 - Everything else in this repository (89 modules) and AF (317 modules) was compiled from source
   against the release's Mathlib, with no `sorry` and no error.
 - The RH-conditional theorems of v1.0 remain in the repository unchanged and do not depend on
